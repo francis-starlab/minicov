@@ -3,6 +3,7 @@ use walkdir::WalkDir;
 
 fn main() {
     let mut cfg = Build::new();
+    cfg.target("x86-64");
     cfg.compiler("clang");
     cfg.flag("-nostdlibinc");
     cfg.flag("-fno-stack-protector");
